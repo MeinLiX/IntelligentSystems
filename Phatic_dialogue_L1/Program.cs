@@ -9,6 +9,6 @@ async Task HandleErrorAsync(ITelegramBotClient bc, Exception err, CancellationTo
 async Task HandleUpdateAsync(ITelegramBotClient botClient, Telegram.Bot.Types.Update update, CancellationToken ct)
 {
     if (update.Type != Telegram.Bot.Types.Enums.UpdateType.Message && update?.Message?.Text is null) return;
-    await botClient.SendTextMessageAsync(update.Message.Chat.Id, text: Brain.GetAnswer(update.Message.Text), cancellationToken: ct);
+    await botClient.SendTextMessageAsync(update.Message.Chat.Id, text: Brain.GetPredict(update.Message.Text), cancellationToken: ct);
 }
 Console.ReadKey();
