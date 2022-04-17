@@ -51,6 +51,8 @@ public static class Specification
             new MessageModel("чому так довго не виходили на зв'язок", MessageType.question),
             new MessageModel("не вірю своєму коду, які люди", MessageType.command),
             new MessageModel("хочете дізнатися секрет", MessageType.question),
+            new MessageModel("чим можу допомогти", MessageType.question),
+            new MessageModel("щось підсказати", MessageType.question),
             new MessageModel("як ся маєте", MessageType.question),
         }
     };
