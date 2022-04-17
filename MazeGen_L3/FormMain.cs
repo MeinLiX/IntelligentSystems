@@ -28,8 +28,8 @@ namespace MazeGen_L3
                         gr.FillRectangle(new SolidBrush(Color.IndianRed), new Rectangle(new Point(c.X * CellWidth, c.Y * CellWidth), new Size(CellWidth, CellWidth)));
                 foreach (Cell c in Mz.Solve)
                     gr.FillRectangle(new SolidBrush(Color.LightGreen), new Rectangle(new Point(c.X * CellWidth, c.Y * CellWidth), new Size(CellWidth, CellWidth)));
-                gr.FillRectangle(new SolidBrush(Color.Green), new Rectangle(new Point(Mz.Start.X * CellWidth, Mz.Start.Y * CellWidth), new Size(CellWidth, CellWidth)));
-                gr.FillRectangle(new SolidBrush(Color.Red), new Rectangle(new Point(Mz.Finish.X * CellWidth, Mz.Finish.Y * CellWidth), new Size(CellWidth, CellWidth)));
+                gr.FillRectangle(new SolidBrush(Color.Green), new Rectangle(new Point((Mz.Start.X - 1) * CellWidth, Mz.Start.Y * CellWidth), new Size(CellWidth, CellWidth)));
+                gr.FillRectangle(new SolidBrush(Color.Red), new Rectangle(new Point((Mz.Finish.X + 1) * CellWidth, Mz.Finish.Y * CellWidth), new Size(CellWidth, CellWidth)));
             }
             pictureBoxMaze.Image = Bm;
         }
@@ -75,8 +75,8 @@ namespace MazeGen_L3
                         if (!Mz.Cells[i, j].Wall) gr.FillRectangle(new SolidBrush(Color.White), rec);
                         else gr.FillRectangle(new SolidBrush(Color.Black), rec);
                     }
-                gr.FillRectangle(new SolidBrush(Color.Green), new Rectangle(new Point(Mz.Start.X * CellWidth, Mz.Start.Y * CellWidth), new Size(CellWidth, CellWidth)));
-                gr.FillRectangle(new SolidBrush(Color.Red), new Rectangle(new Point(Mz.Finish.X * CellWidth, Mz.Finish.Y * CellWidth), new Size(CellWidth, CellWidth)));
+                gr.FillRectangle(new SolidBrush(Color.Green), new Rectangle(new Point((Mz.Start.X - 1) * CellWidth, Mz.Start.Y * CellWidth), new Size(CellWidth, CellWidth)));
+                gr.FillRectangle(new SolidBrush(Color.Red), new Rectangle(new Point((Mz.Finish.X + 1) * CellWidth, Mz.Finish.Y * CellWidth), new Size(CellWidth, CellWidth)));
             }
             pictureBoxMaze.Image = bm;
             Bm = bm;

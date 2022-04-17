@@ -16,7 +16,7 @@ class Maze
     {
         Width = width;
         Height = height;
-        Start = new Cell(1, 1, true, true);
+        Start = new Cell(1, 1, true, false);
         Finish = new Cell(Width - 3, Height - 3, true, true);
         Cells = new Cell[width, height];
         for (var i = 0; i < width; i++)
